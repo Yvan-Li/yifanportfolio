@@ -1,0 +1,133 @@
+<!-------f-----------
+
+    Project 4
+    Name: Yifan Li 
+    Date: 2022.12.14
+    Description:Website Development & Deployment
+
+
+-------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700;900&display=swap" rel="stylesheet">
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="css/home_style.css">
+    <title>Yifan Li Website </title>
+  </head>
+
+  <body>
+    <header id="header">
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar">
+            <h1><a href="#home" class="home-link"> { Yifanli } </a>  </h1>
+            <ul>
+              <li><a href="index.html" class="nav-link">About </a></li>
+              <li><a href="skills.html" class="nav-link">Skills </a></li>
+              <li><a href="skills.html" class="nav-link">Projects </a></li>
+              <li><a href="skills.html" class="nav-link">Blogs </a></li>
+              <li><a href="contact.html" class="nav-link">Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Intro Section -->
+    <section class="intro" id="intro">
+        <!-- set pfp -->
+        <img src="images/avatar.png" alt="Yifan Li" class="intro_img">
+        <!-- set intro text -->
+        <div class="intro_text">
+            <h3>Hi, I'm</h3>
+            <h1 class="intro_title ">
+               <strong> YiFan Li </strong> <br></h1>
+            <h2 class="intro_subtitle"> Full Stack Web Developer </h2>
+            <div class="intro_body ">
+                <p>
+                    I'm a Winnipeg-based Full Stack Web Developer
+                  and currently studying at RRC. <br>I love combining logic and creative design to
+                   produce accessible and user friendly websites and applications.
+                   I also talk & write about those things.
+                    I am proficient in HTML, CSS, and JavaScript; I'm learning Java and 
+                    am enthusiastic about its challenges.
+                </p>
+            </div>
+            
+            <!-- input your email  -->
+            <div class="intro_resume">
+                <label for="email"> Download Resume </label>
+                <input id="email" name="email" type="text" placeholder="Enter Email Address">
+                <p class="emailerror error" id="email_error">* Enter Email Address</p>
+                <p class="emailerror error" id="emailformat_error">* Invalid Email Address</p>
+                <button type="submit" id="submit">Send</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- More about -->
+    <section class="about" id="about">
+        <h2 class="about_heading"> { More About Me } </h2>
+        <h4> Who am I </h4>
+        <p>
+          Economist by university, Full Stack Web Developer by passion.
+          In 2022, I made a brave career from BD to a Programmer.                   
+          I recently study at Red River College, focusing on HTML & CSS & JS,DBMS and Java;The journey has been lovely so far, 
+          and what started casually as "I'll study a bit of this and let's see" turned quickly into a passion.Deciding to change career was a good call. I've been truly enjoying coding.
+        </p>
+
+        <h4> Why work with me?</h4>
+        <p>
+          🛠️ I'm Problem solving: the essence of programming, in my opinion. Break the problem into smaller ones, 
+          have clear the input you're receiving and the output you want to serve.<br>
+          🔍 I'm Investigating: I want to understand how things work "under the hood", and I don't reuse pieces of code I don't understand.<br>
+          👩‍💻 I'm Improving: as I progress with learning and I get more and more exposed to other people's code, I try to refactor and improve my own code.<br>
+          📝 I'm Documenting and explaining: I enjoy keeping notes of what I learn, and helping others to understand concepts I have already clear. It puts my learning at 10x speed.
+        </p>
+    </section>
+
+ 
+    <div class="socials" id="socials">
+      <a href="#" target="_blank"><img src="icons/Linkedin.png" alt="Linkedin" loading="lazy"
+        class="social_card"></a>
+      <a href="#" target="_blank"><img src="icons/Github.png" alt="Github" loading="lazy"
+          class="social_card"></a>
+      <a href="#" target="_blank"><img src="icons/Twitter.png" alt="Twitter" loading="lazy"
+        class="social_card"></a>
+      <a href="#" target="_blank"><img src="icons/Discord.png" alt="Discord" loading="lazy"
+          class="social_card"></a>
+    </div>
+
+
+    <!-- Footer section -->
+    <footer id="footer">
+        <!-- Social accounts - Fixed to the right -->
+     
+      <div class="footer_nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">About </a></li>
+            <li><a href="skills.html" class="nav-link">Skills </a></li>
+            <li><a href="skills.html" class="nav-link">Projects </a></li>
+            <li><a href="skills.html" class="nav-link">Blogs </a></li>
+            <li><a href="contact.html" class="nav-link">Contact </a></li>
+          </ul>
+      </div>
+       
+      <div class="footer_copyright">
+        <p> Copyright &copy; 2022</p>
+        <p> Built with ♡ by YifanLi</p>
+      </div>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="JS/home.js"></script>
+
+  </body>
+</html>
