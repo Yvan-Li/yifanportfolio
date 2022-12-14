@@ -1,0 +1,126 @@
+<!-------f-----------
+
+    Project 4
+    Name: Yifan Li 
+    Date: 2022.12.14
+    Description:Website Development & Deployment
+
+
+-------------------->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700;900&display=swap" rel="stylesheet">
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="css/contact_style.css">
+    <title>Yifan Li Website </title>
+  </head>
+
+  <body>
+    <header id="header">
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar">
+            <h1><a href="#home" class="home-link"> { Yifanli } </a>  </h1>
+            <ul>
+                <li><a href="index.html" class="nav-link">About </a></li>
+                <li><a href="skills.html" class="nav-link">Skills </a></li>
+                <li><a href="skills.html" class="nav-link">Projects </a></li>
+                <li><a href="skills.html" class="nav-link">Blogs </a></li>
+                <li><a href="contact.html" class="nav-link">Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="contact" id="contact">
+      <h2 class="contact_heading">{ Contact Me }</h2>
+        <form class="contact_form" method="post" action="index.html">
+          <div class="fieldset">
+            <ul>
+              <!-- name -->
+              <li>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder=" Enter your name " 
+                class="input_field">
+                <p class="contactError error" id="name_error">*Required field</p>
+              </li>
+              <!-- phonenumber -->
+              <li>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder=" Enter your phone number " 
+                class="input_field">
+                <p class="contactError error" id="phone_error">* Required field</p>
+                <p class="contactError error" id="phoneformat_error">*Invalid phone address</p>
+              </li>
+              <!-- email -->
+              <li>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" 
+                class="input_field">
+                <p class="contactError error" id="email_error">*Required field</p>
+                <p class="contactError error" id="emailformat_error">*Invalid email address</p>
+              </li>
+              <!--comment -->
+              <li>
+                <label for="comment">Comments</label>
+                <textarea id="comment" name="comment" placeholder="Ask me Anything :)" 
+                class="input_field"></textarea>
+                <p class="contactError error" id="comment_error">* Required field</p>
+              </li>
+
+              <!-- submit and reset-->
+              <li class="button">
+                <input type="submit" value="Submit" id="submit_button">
+                <input type="reset" value="Reset" id="reset_button">
+              </li>
+              </ul>
+          </div>
+        </form>
+    </section>
+
+    <!-- Social accounts - Fixed to the right -->
+    <div class="socials" id="socials">
+      <a href="#" target="_blank"><img src="icons/Linkedin.png" alt="Linkedin" loading="lazy"
+        class="social_card"></a>
+      <a href="#" target="_blank"><img src="icons/Github.png" alt="Github" loading="lazy"
+          class="social_card"></a>
+      <a href="#" target="_blank"><img src="icons/Twitter.png" alt="Twitter" loading="lazy"
+        class="social_card"></a>
+      <a href="#" target="_blank"><img src="icons/Discord.png" alt="Discord" loading="lazy"
+          class="social_card"></a>
+    </div>
+
+
+    <!-- Footer section -->
+    <footer id="footer">
+      <div class="footer_nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">About </a></li>
+            <li><a href="skills.html" class="nav-link">Skills </a></li>
+            <li><a href="skills.html" class="nav-link">Projects </a></li>
+            <li><a href="skills.html" class="nav-link">Blogs </a></li>
+            <li><a href="contact.html" class="nav-link">Contact </a></li>
+          </ul>
+      </div>
+       
+      <div class="footer_copyright">
+        <p> Copyright &copy; 2022</p>
+        <p> Built with ♡ by YifanLi.</p>
+      </div>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="js/contact.js"></script>
+
+   
+  </body>
+</html>

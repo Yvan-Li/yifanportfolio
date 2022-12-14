@@ -1,0 +1,279 @@
+/*
+
+    Project 4
+    Name: Yifan Li 
+    Date: 2022.12.14
+    Description:Website Development & Deployment
+
+*/
+
+
+/* variables   */
+:root{
+  --font-family: "JetBrains Mono", monospace;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+
+  --primary-color: #7f55cd;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+/* CSS resets */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover{
+  color: var(--secondary-color); 
+}
+
+
+body{
+  font-family: var(--font-family);
+}
+
+/* nav bar */
+#navbar{
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: var(--bg-color);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3.5rem;
+  box-shadow: 0 3px 5px  rgba(0,0,0,0.2);
+  transition: var(--transition);
+}
+
+#navbar:hover{
+  box-shadow: 0 1.2px 5px var(--primary-color); 
+}
+
+#navbar h1{
+
+  font-weight: var(--bolder-font);
+  font-size: 1rem;
+}
+
+#navbar ul{
+  display: flex;
+  gap: 3.6rem;
+}
+
+#navbar ul li{
+  margin-top:5px;
+  font-weight: var(--bold-font);
+  font-size: 1rem;
+}
+
+#navbar ul li a{
+  transition: var(--transition);
+}
+
+#navbar ul li a:hover{
+  color: var(--secondary-color);
+  opacity: 0.8;
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+/* skills */
+
+
+/* skills */
+
+.skills{
+  max-width:1500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.skill_heading{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.skills_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.first_line, .second_line{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box_card{
+  width: 230px;
+  height: 230px;  
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 8px var(--secondary-shadow);
+  padding: 25px;
+  transition: var(--transition);
+}
+
+.box_card img{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.box_card h3{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size:18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.box_card p{
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(34, 34, 34);
+}
+
+.box_card:hover{
+  box-shadow: 0 3px 15px var(--secondary-shadow);
+}
+
+
+
+
+
+/* social */
+.socials{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 15px;
+}
+
+.social_card{
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.social_card:hover{
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+
+/* footer */
+#footer{
+  width:100%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: var(--normal-font);
+  margin-bottom: 30px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer_nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_nav li:not(:last-child)::after{
+  content: "|";
+  margin-left: 10px;
+  color: var(--primary-color);
+}
+
+.footer_copyright{
+  margin-top: 5px;
+  color:rgb(84, 83, 83);
+}
+
+/* media queries */
+/* Max-width 1020px */
+@media screen and (max-width:1020px) { 
+  #navbar{
+    gap: 10px;
+   }
+    #navbar ul{
+      margin:0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+   
+  #navbar{
+    padding: 10px;
+    height:50px;
+  }
+
+  #navbar h1{
+    display: none;
+  }
+
+  #navbar ul{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+  }
+
+  #navbar ul li a{
+    font-size: 0.9rem;
+  }
+
+  .first_line, .second_line{
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  
+
+  }
+  
+    
+   
+
+  
