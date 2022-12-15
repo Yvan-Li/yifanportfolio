@@ -1,3 +1,4 @@
+
 /**
  * JS for contact.html
  * Author: Yifan Li
@@ -35,14 +36,13 @@ return true;
  *          the browser from resetting the form.
  */
 function resetForm(e) {
-	if (confirm('Reset form?')) {
+	if (confirm('Reset the form?')) {
 		hideErrors();
 		document.getElementById("name").focus();
 		return true;
 	}
 	e.preventDefault();
-	// When using onReset="resetForm()" in markup, returning false would prevent
-	// the form from resetting
+
 	return false;
 }
 
@@ -56,59 +56,63 @@ function resetForm(e) {
 function FormHasErrors() {
   let errorFlag = false;
 
-  //check if the name is empty. If it is, display an error message
-  let name = document.getElementById("name");
-  if (name.value == "") {
-    let error = document.getElementById("name_error");
-    error.style.display = "block";
-    errorFlag = true;
-  }
+  let requiredFields = ["name","phone","email"];
 
-  // check if the email address is empty. If it is, display an error message
-  let email = document.getElementById("email");
-  if (email.value == "") {
-    let error = document.getElementById("email_error");
-    error.style.display = "block";
-    errorFlag = true;
-  }
+  for( let i = 0; i < requiredFields.length;i++){
 
-    // if the email address is not empty. check the format of the email address
-    if (email.value != "") {
-      let emailRegex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/);
-      if (!emailRegex.test(email.value)) {
-        document.getElementById("emailformat_error").style.display = "block";
-        if (!errorFlag) {
-          email.focus();
-          email.select();
-        }
-        errorFlag = true;
+    let fields = document.getElementById(requiredFields[i]);
+    if(!formFieldHasInput(fields)){
+      document.getElementById(requiredFields[i]+"_error").style.display = "block";
+      if(!errorFlag){
+        fields.focus();
+        fields.select();
       }
-    }
-
-    // check if the phone number is empty. If it is, display an error message
-    let phone = document.getElementById("phone");
-    if (phone.value == "") {
-      let error = document.getElementById("phone_error");
-      error.style.display = "block";
       errorFlag = true;
     }
 
-    // if the phone number is not empty. check the format of the phone number
-    if (phone.value != "") {
-      let phoneRegex = new RegExp(/^\d{3}-\d{3}-\d{4}$/);
-      if (!phoneRegex.test(phone.value)) {  
-        document.getElementById("phoneformat_error").style.display = "block";
-        if (!errorFlag) {
-          phone.focus();
-          phone.select();
+    //use regex to check if the email is valid 
+    if(requiredFields[i] == "email"){
+      let email = document.getElementById("email");
+      let emailRegex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/);
+      if(!emailRegex.test(email.value) && formFieldHasInput(email)){
+        document.getElementById("emailformat_error").style.display = "block";
+        if(!errorFlag){
+          fields.focus();
+          fields.select();
         }
         errorFlag = true;
       }
     }
 
+    //use regex to check if the phone number has 10 digits
+    if(requiredFields[i] == "phone"){
+      let phone = document.getElementById("phone");
+      let phoneRegex = new RegExp(/^\d{10}$/);
+      if(!phoneRegex.test(phone.value) && formFieldHasInput(phone)){
+        document.getElementById("phoneformat_error").style.display = "block";
+        if(!errorFlag){
+          fields.focus();
+          fields.select();
+        }
+        errorFlag = true;
+      }
+    }
 
-  return errorFlag;
+  }
+
+
+  return errorFlag
+
+
+
+
+
+
+  
+
 }
+
+
 
 
  
@@ -121,7 +125,6 @@ function FormHasErrors() {
  */
 
 function formFieldHasInput(fieldElement) {
-	// Check if the text field has a value
 	if (fieldElement.value == null || trim(fieldElement.value) == "") {
 		// Invalid entry
 		return false;
@@ -131,6 +134,16 @@ function formFieldHasInput(fieldElement) {
 	return true;
 }
 
+/*
+ * Removes white space from a string value.
+ *
+ * return  A string with leading and trailing white-space removed.
+ */
+function trim(str)  
+{
+	// Uses a regex to remove spaces from a string.
+	return str.replace(/^\s+|\s+$/g,"");
+}
 
 
 /*
@@ -163,15 +176,6 @@ function load() {
 document.addEventListener("DOMContentLoaded", load);
 
 
-
-
-
-
-
-
-
-
- 
 
 
 
