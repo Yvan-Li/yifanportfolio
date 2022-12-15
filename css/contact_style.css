@@ -127,6 +127,11 @@ body{
   color: var(--primary-color);
 }
 
+.fieldset ul p{
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
 .fieldset input,textarea{
   width: 100%;
   padding-top: 10px;
@@ -149,6 +154,8 @@ body{
   color: grey;
   font-size: 13px;
 }
+
+
 
 .button{
   display: flex;
